@@ -1,5 +1,5 @@
 <?php
-	require_once 'EjemploForm.php';
+	require_once 'ClienteForm.php';
 	
 	$form = new ClienteForm();
 	

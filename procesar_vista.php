@@ -8,22 +8,27 @@
 		</div>
 		<?php endif;?>
 		
-		<?php $tiene_error = $form->tieneError('nombre_producto') ? "has-error" : "";?>
+		<?php $tiene_error = $form->tieneError('nombre') ? "has-error" : "";?>
 		<div class="form-group <?php echo $tiene_error;?>">
-			<label class="control-label" for="nombre_producto">Nombre producto</label>
-			<input type="text" class="form-control" name="nombre_producto" id="nombre_producto" value="<?php echo $form->getValor("nombre_producto");?>">
-			<span class="help-block"><?php echo $form->getError('nombre_producto');?></span>
+			<label class="control-label" for="nombre">Nombre </label>
+			<input type="text" class="form-control" name="nombre" id="nombre" value="<?php echo $form->getValor("nombre");?>">
+			<span class="help-block"><?php echo $form->getError('nombre');?></span>
+		</div>
+
+		<?php $tiene_error = $form->tieneError('apellido') ? "has-error" : "";?>
+		<div class="form-group <?php echo $tiene_error;?>">
+			<label class="control-label" for="apellido">apellido </label>
+			<input type="text" class="form-control" name="apellido" id="apellido" value="<?php echo $form->getValor("apellido");?>">
+			<span class="help-block"><?php echo $form->getError('apellido');?></span>
 		</div>
 		
-		<?php $tiene_error = $form->tieneError('vigente') ? "has-error" : "";?>
-		<div class="<?php echo $tiene_error;?>">
-			<div class="checkbox">
-			<label>
-				<input type="checkbox" name="vigente" id="vigente" value="1" <?php echo $form->getChecked('vigente');?>>
-			Vigente
-			</label>
+		<?php $tiene_error = $form->tieneError('fecha') ? "has-error" : "";?>
+		<div class="form-group <?php echo $tiene_error;?>">
+			<label class="control-label" for="fecha">fecha </label>
+			<input type="date" class="form-control" name="fecha" id="fecha" value="<?php echo $form->getValor("fecha");?>">
+			<span class="help-block"><?php echo $form->getError('fecha');?></span>
 		</div>
-		
+
 		<?php $tiene_error = $form->tieneError('categoria') ? "has-error" : "";?>
 		<div class="form-group <?php echo $tiene_error;?>">
 			<label class="control-label" for="categoria">Categoría</label>
@@ -35,6 +40,16 @@
 			</select>
 			<span class="help-block"><?php echo $form->getError('categoria');?></span>
 		</div>
+
+		<?php $tiene_error = $form->tieneError('vigente') ? "has-error" : "";?>
+		<div class="<?php echo $tiene_error;?>">
+			<div class="checkbox">
+			<label>
+				<input type="checkbox" name="vigente" id="vigente" value="1" <?php echo $form->getChecked('vigente');?>>
+			Vigente
+			</label>
+		</div>
+		
 		
 		<p><button type="submit" class="btn btn-primary">Procesar formulario</button></p>
 	</form>
